@@ -1,0 +1,44 @@
+<section>
+    <div class="container mt-4">
+         <a href="/admin/vibin" class="btn btn-success mt-5" style="margin-right: 50px; "> Back</a>
+    <div class="row">
+
+
+         <div class="col-md-6">
+             <h2 class="text-center">Edit Product Vibin</h2>
+             <form action="/admin/edit-vibin/{{vibin._id}}" method="POST" enctype="multipart/form-data" >
+                      <label for="">File No</label>
+                 <input type="text" name="ProjectName" class="form-control" value="{{vibin.ProjectName}}">
+
+                    <label for="">Status <strong>[ <strong class="bg-dark text-danger">SHEDULED,</strong> <strong class="bg-dark text-primary">ONGOING,</strong> <strong class="bg-dark text-success">COMPLETED</strong>]</strong> </label>
+                       <label for="" class="text-muted">Please Copy And Paste Status</label>
+                 <input type="text" name="progress" class="form-control" placeholder="{{vibin.progress}}">
+   
+                        
+
+                 <label for="">Client</label>
+                 <input type="text" name="RunningMan" class="form-control" value="{{vibin.RunningMan}}">
+
+                 <label for="">Cost</label>
+                 <input type="text" name="ResourcesMachine" class="form-control"  value="{{vibin.ResourcesMachine}}">
+
+                <label for="">Starting Time</label>
+                 <input type="text" name="startingTime" class="form-control"  value="{{vibin.startingTime}}">
+
+                 <label for="">Ending Time</label>
+                 <input type="text" name="CompetionTime" class="form-control" value="{{vibin.CompetionTime}}">
+
+                  
+                  <label for="">Pending Amount</label>
+                 <input type="text" name="PendingAmount" class="form-control" value="{{vibin.PendingAmount}}">
+
+                 <label for="">Remarks</label>
+                 <input type="text" name="Remarks" class="form-control" value="{{vibin.Remarks}}">
+
+                 <button type="submit" class="btn btn-success mt-4">Submit</button>
+             </form>
+
+         </div>
+      </div>
+    </div>
+</section>

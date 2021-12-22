@@ -1,0 +1,56 @@
+<section>
+  <div class="container">
+ <a href="/admin" class="btn btn-success mt-5" style="margin-right: 50px; "> Back</a>
+    <a class="btn btn-success" style="margin-left: 50px; margin-top: 50px;" href="/admin/add-product-abdu">Add
+      Progress</a>
+
+
+    <h1 style="font-family: 'Times New Roman', Times, serif;" class="text-center  text-white">Abdu Progress</h1>
+    <table class="table mt-5" id="table_id">
+      <thead>
+        <tr style="font-family:cursive;">
+     
+          <th scope="col">File No:</th>
+          <th scope="col">Status</th>
+          <th scope="col">Client</th>
+          <th scope="col">Cost</th>
+          <th scope="col">Starting Time</th>
+          <th scope="col">Ending Time</th>
+          <th scope="col">Pending Amount</th>
+           <th scope="col">Remarks</th>
+           <th scope="col">Edit</th>
+          <th scope="col">Delete</th>
+
+        </tr>
+      </thead>
+      <tbody class="text-primary">
+        {{#each progressAbdu}}
+        <tr>
+        
+          <td>{{this.ProjectName}}</td>
+          <td>{{this.progress}}</td>
+          <td>{{this.RunningMan}}</td>
+          <td>{{this.ResourcesMachine}}</td>
+            <td>{{this.startingTime}}</td>
+          <td>{{this.CompetionTime}}</td>
+            <td>{{this.PendingAmount}}</td>
+              <td>{{this.Remarks}}</td>
+          <td> <a class="btn btn-primary"  style="font-family:Verdana, Geneva, Tahoma, sans-serif;" href="/admin/edit-abdu/{{this._id}}">Edit Progress</a></td>
+          <td> <a class="btn btn-success"  style="font-family:Verdana, Geneva, Tahoma, sans-serif;" href="/admin/delete-progress-abdu/{{this._id}}" onclick=" return confirm('Are You Sure  {{this.ProjectName}} Project is Completed')">Completed</a></td>
+
+   
+
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+
+</section>
+
+
+<script>
+  $(document).ready(function () {
+    $('#table_id').DataTable();
+  });
+</script>

@@ -1,0 +1,66 @@
+<section>
+    <div class="container mt-4">
+         <a href="/admin/kadher" class="btn btn-success mt-5" style="margin-right: 50px; "> Back</a>
+    <div class="row">
+
+
+         <div class="col-md-6">
+             <h2 class="text-center">Add Product Kadher</h2>
+             <form action="/admin/add-product-kadher" method="POST" enctype="multipart/form-data">
+                 <label for="">File No</label>
+                 <input type="text" name="ProjectName" class="form-control">
+
+     <label for="">Status <strong>[ <strong class="bg-dark text-danger">SHEDULED,</strong> <strong class="bg-dark text-primary">ONGOING,</strong> <strong class="bg-dark text-success">COMPLETED</strong>]</strong> </label>
+                       <label for="" class="text-muted">Please Copy And Paste Status</label>
+                 <input type="text" name="progress" class="form-control" placeholder="Status">
+   
+                        
+
+                 <label for="">Client</label>
+                 <input type="text" name="RunningMan" class="form-control">
+
+                 <label for="">Cost</label>
+                 <input type="text" name="ResourcesMachine" class="form-control">
+
+                <label for="">Starting Time</label>
+                 <input type="text" name="startingTime" class="form-control">
+
+                 <label for="">Ending Time</label>
+                 <input type="text" name="CompetionTime" class="form-control">
+                   
+
+                   
+                  <label for="">Pending Amount</label>
+                 <input type="text" name="PendingAmount" class="form-control">
+
+                 <label for="">Remarks</label>
+                 <input type="text" name="Remarks" class="form-control">
+                   
+                   
+                 <button type="submit" class="btn btn-success mt-4">Submit</button>
+             </form>
+
+
+         </div>
+      </div>
+    </div>
+</section>
+
+
+
+
+<style>
+    input[type=radio] {
+        width: 30px;
+        height: 20px;
+        
+    }
+
+    label.radio-inline {
+        display: flex;
+        align-items: center;
+    }
+
+    
+
+</style>

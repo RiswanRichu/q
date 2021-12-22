@@ -1,0 +1,46 @@
+<section>
+    <div class="container">
+      <a href="/vehicle" class="btn btn-success mt-5" style="margin-right: 50px; "> Back</a>
+      <div class="row mt-1 mb-1">
+       
+         <button class="btn btn-success" style="margin-left: 900px ;" onclick="window.print()">Print this page</button>
+           
+      </div>
+      <h1 style="font-family: 'Times New Roman', Times, serif;" class="text-center  text-light">Glamer Old <strong >No: <strong style="color: palegoldenrod;">KL 51 E 98</strong> </strong> </h1>
+      <table class="table mt-5" id="table_id">
+  <thead>
+    <tr>
+ 
+   <th scope="col">No:</th>
+         
+          <th scope="col">User Name</th>
+          <th scope="col">Date</th>
+          
+       
+    </tr>
+  </thead>
+  <tbody class="text-dark">
+      {{#each GlamerOldDetails}}
+    <tr>
+
+        <td>{{this.no}}</td>
+          <td>{{this.progress-method}}</td>
+          <td>{{this.date}}</td>
+  
+
+     
+    
+    </tr>
+  {{/each}}
+  </tbody>
+</table> 
+    </div>
+
+</section>
+
+
+<script>
+$(document).ready( function () {
+    $('#table_id').DataTable();
+} );
+</script>

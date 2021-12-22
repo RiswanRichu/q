@@ -1,0 +1,55 @@
+<section>
+    <div class="container">
+      <a href="/admin/vehicle" class="btn btn-success mt-5" style="margin-right: 50px; "> Back</a>
+      <div class="row mt-1 mb-1">
+       
+           <td> <a class="btn btn-success"  style="font-family:Verdana, Geneva, Tahoma, sans-serif; margin-left: 1000px;" href="/admin/add-progress-EECO">Add Progress</a></td>
+      </div>
+      <h1 style="font-family: 'Times New Roman', Times, serif;" class="text-center  text-light">EECO <strong >No: <strong style="color: palegoldenrod;">KL 09 S 2510</strong> </strong> </h1>
+      <table class="table mt-5" id="table_id">
+  <thead>
+    <tr>
+ 
+  
+<th scope="col">No:</th>
+
+   <th scope="col">FILE No:</th>
+         
+          <th scope="col">User Name</th>
+            <th scope="col">STARTING KILO METRE</th>
+          <th scope="col">ENDING KILO METRE</th>
+          <th scope="col">Date</th>
+          
+            <th scope="col">Delete</th>
+     
+     
+    </tr>
+  </thead>
+  <tbody class="text-dark">
+      {{#each EECODetails}}
+    <tr>
+
+         <td>{{this.no}}</td>
+<td>{{this.Fno}}</td>
+          <td>{{this.progress-method}}</td>
+          <td>{{this.SKM}}</td>
+          <td>{{this.EKM}}</td>
+          <td>{{this.date}}</td>
+       <td> <a class="btn btn-danger"  style="font-family:Verdana, Geneva, Tahoma, sans-serif;" href="/admin/delete-progress-EECO/{{this._id}}" onclick=" return confirm('Are You Sure Delete)">Delete</a></td>
+
+     
+    
+    </tr>
+  {{/each}}
+  </tbody>
+</table> 
+    </div>
+
+</section>
+
+
+<script>
+$(document).ready( function () {
+    $('#table_id').DataTable();
+} );
+</script>

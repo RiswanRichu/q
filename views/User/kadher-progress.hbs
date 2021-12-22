@@ -1,0 +1,52 @@
+<section>
+    <div class="container">
+      <a href="/" class="btn btn-success mt-5" style="margin-right: 50px; "> Back</a>
+      <div class="row mt-1 mb-1">
+       
+       
+      </div>
+      <h1 style="font-family: 'Times New Roman', Times, serif;" class="text-center  text-light">Kadher Progress</h1>
+      <table class="table mt-5" id="table_id">
+  <thead>
+    <tr>
+ 
+   <th scope="col">File No:</th>
+          <th scope="col">Status</th>
+          <th scope="col">Client</th>
+          <th scope="col">Cost</th>
+          <th scope="col">Starting Time</th>
+          <th scope="col">Ending Time</th>
+          <th scope="col">Pending Amount</th>
+           <th scope="col">Remarks</th>
+      
+     
+    </tr>
+  </thead>
+  <tbody class="text-dark">
+      {{#each getKadherProgress}}
+    <tr>
+  <td>{{this.ProjectName}}</td>
+          <td>{{this.progress}}</td>
+          <td>{{this.RunningMan}}</td>
+          <td>{{this.ResourcesMachine}}</td>
+            <td>{{this.startingTime}}</td>
+          <td>{{this.CompetionTime}}</td>
+            <td>{{this.PendingAmount}}</td>
+              <td>{{this.Remarks}}</td>
+
+     
+    
+    </tr>
+  {{/each}}
+  </tbody>
+</table> 
+    </div>
+
+</section>
+
+
+<script>
+$(document).ready( function () {
+    $('#table_id').DataTable();
+} );
+</script>

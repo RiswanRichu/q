@@ -1,0 +1,73 @@
+<section>
+    <div class="container mt-4">
+         <a href="/admin/glamer-new" class="btn btn-success mt-5" style="margin-right: 50px; "> Back</a>
+    <div class="row">
+
+
+         <div class="col-md-6">
+             <h2 class="text-center">Add Progress Glamer New</h2>
+             <form class="text-dark" action="/admin/add-progress-glamerNew" method="POST" enctype="multipart/form-data">
+                  <label for="" style="margin-top: 30px;" class="col-md-7">No.</label>
+              <input type="number" name="no" style="margin-top: 10px;" class="col-md-6" />
+
+                   
+                     <label class="col-md-6 text-light" style="margin-top: 10px;" for="">Managers</label>
+               <div class="payment">
+                       
+                            <label class="radio-inline">
+                                <input type="radio" name="progress-method" value="KADHER" checked>KADHER
+                            </label>
+
+                               <label class="radio-inline">
+                                <input type="radio" name="progress-method" value="ABDU" checked>ABDU
+                            </label>
+
+
+                            <label class="radio-inline">
+                                <input type="radio" name="progress-method" value="VIPIN">VIPIN
+                            </label>
+
+                             <label class="radio-inline">
+                                <input type="radio" name="progress-method" value="SUDHEESH">SUDHEESH
+                            </label>
+                         
+                        </div>
+
+                        
+                      <label for="">FILE NO:</label>
+                 <input type="text" name="Fno" class="form-control">
+                           <label for="">STARTING KILO METRE</label>
+                 <input type="text" name="SKM" class="form-control">
+
+                    <label for="">ENDING KILO METRE</label>
+                 <input type="text" name="EKM" class="form-control">
+
+                 <label for="">Date</label>
+                 <input type="date" name="date" class="form-control">
+
+              
+                   
+
+                 <button type="submit" class="btn btn-success mt-4">Submit</button>
+             </form>
+
+         </div>
+      </div>
+    </div>
+</section>
+
+<style>
+    input[type=radio] {
+        width: 30px;
+        height: 20px;
+        
+    }
+
+    label.radio-inline {
+        display: flex;
+        align-items: center;
+    }
+
+    
+
+</style>
